@@ -1,0 +1,40 @@
+<div class="jumbotron">
+ <h1 class="text-center">Formulário de Cadastro</h1>
+ <hr />
+ <div class="alert alert-success" role="alert" ng-if="ctrl.success">
+ Formulário enviado com sucesso!
+ </div>
+ <form ng-submit="ctrl.submit()">
+ 
+ <div class="form-group">
+ <label class="control-label" for="nome">Nome</label>
+ <input type="text" class="form-control" name="name" id="nome">
+ </div>
+ 
+ <div class="form-group">
+ <label class="control-label" for="email">Email</label>
+ <input type="text" class="form-control" name="email" id="email" >
+ </div>
+ 
+ <div class="form-group">
+ <label class="control-label" for="data">Data de nascimento</label>
+ <input type="date" class="form-control" name="data" id="data">
+ </div>
+ 
+ <div class="form-group">
+ <label class="control-label" for="data">CPF</label>
+ <input type="text" class="form-control" name="cpf" id="cpf" onBlur="ValidarCPF(form1.cpf);" 
+onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
+ </div>
+ 
+ <div class="form-group">
+ <label class="control-label" for="course">Telefone</label>
+ <input type="text" class="form-control" name="tel" id="tel">
+ </div>
+ 
+ <hr />
+ <div class="form-group text-center">
+ <button type="submit" class="btn btn-primary">Enviar</button>
+ </div>
+ </form>
+ </div>

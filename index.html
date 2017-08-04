@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  ng-app="planosApp">
+<head>
+
+<!--Css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    
+<!--JS-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>-->
+    <script src="js/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <script src="routes/route.js"></script>
+    <script src="controllers/home.controller.js"></script>
+    <script src="controllers/computador.controller.js"></script>
+    <script src="controllers/tablet.controller.js"></script>
+    <script src="controllers/plataforma.controller.js"></script>
+    <script src="controllers/wifi.controller.js"></script>
+    
+</head>
+
+
+<body>
+
+<!--Navegação-->
+<nav class="navbar navbar-inverse" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home1</a></li>
+    </ul>
+</nav>
+
+<!--Conteudo-->
+<div class="container">
+    <div ui-view="content"></div>
+</div>
+
+</body>
+</html>
