@@ -14,9 +14,4 @@
         var vm = this;
           
     }
-  
-  function HomeController($http) {
-        var vm = this;
-          
-    }
 })();

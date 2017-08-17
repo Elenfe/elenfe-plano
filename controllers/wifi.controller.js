@@ -7,14 +7,14 @@
 
     WifiController.$inject = [
         '$state',
-//      '$http'
+      '$http'
     ];
 
-    function WifiController($state) {
+    function WifiController($state, $http) {
         var vm = this;
-//          $http.get('http://private-59658d-celulardireto2017.apiary-mock.com/planos/WF03').then(function (response){
-//        vm.planos = response.data;
-//        console.log(data);
-//      })
+          $http.get('http://private-59658d-celulardireto2017.apiary-mock.com/planos/WF03').then(function (response){
+        vm.planos = response.data;
+        console.log(vm.planos);
+      })
     }
 })();

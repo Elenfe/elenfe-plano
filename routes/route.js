@@ -15,7 +15,8 @@
                 url: '/home',
                 views: {
                     'content': {
-                        controller: 'HomeController as vm',
+                        controller: 'HomeController',
+                        controllerAs:'vm',
                         templateUrl: 'views/home.html'
                     }
                 }
@@ -25,7 +26,8 @@
                 url: '/plataforma',
                 views: {
                     'content': {
-                        controller: 'PlataformaController as vm',
+                        controller: 'PlataformaController',
+                        controllerAs:'vm',
                         templateUrl: 'views/plataforma.html'
                     }
                 }
@@ -35,7 +37,8 @@
                 url: '/tablet',
                 views: {
                     'content': {
-                        controller: 'TabletController as vm',
+                        controller: 'TabletController',
+                        controllerAs:'vm',
                         templateUrl: 'views/tablet.html'
                     }
                 }
@@ -45,7 +48,8 @@
                 url: '/wifi',
                 views: {
                     'content': {
-                        controller: 'WifiController as vm',
+                        controller: 'WifiController',
+                        controllerAs:'vm',
                         templateUrl: 'views/wifi.html'
                     }
                 }
@@ -55,7 +59,8 @@
                 url: '/computador',
                 views: {
                     'content': {
-                        controller: 'ComputadorController as vm',
+                        controller: 'ComputadorController',
+                        controllerAs:'vm',
                         templateUrl: 'views/computador.html'
                     }
                 }
@@ -65,7 +70,8 @@
                 url: '/formulario',
                 views: {
                     'content': {
-                        controller: 'FormularioController as vm',
+                        controller: 'FormularioController',
+                        controllerAs:'vm',
                         templateUrl: 'views/formulario.html'
                     }
                 }
