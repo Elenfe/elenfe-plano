@@ -5,4 +5,4 @@
         .module('planosApp', [
             'ui.router',
         ]);
-}());
+})();
