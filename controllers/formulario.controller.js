@@ -7,10 +7,10 @@
 
     FormularioController.$inject = [
         '$state',
-//      '$http'
+      '$http'
     ];
 
-    function FormularioController($state) {
+    function FormularioController($state, $http) {
         var vm = this;
       
     }
