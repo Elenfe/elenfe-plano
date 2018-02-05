@@ -10,7 +10,9 @@
     function AppRouter($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/home');
 
-        $stateProvider
+        $stateProvider    
+            
+      
             .state('home', {
                 url: '/home',
                 views: {
@@ -18,6 +20,17 @@
                         controller: 'HomeController',
                         controllerAs:'vm',
                         templateUrl: 'views/home.html'
+                    }
+                }
+            })
+      
+            .state('teste', {
+                url: '/teste',
+                views: {
+                    'content': {
+                        controller: 'TesteController',
+                        controllerAs:'vm',
+                        templateUrl: 'views/teste.html'
                     }
                 }
             })
