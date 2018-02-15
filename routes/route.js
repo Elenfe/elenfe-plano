@@ -24,17 +24,6 @@
                 }
             })
       
-            .state('teste', {
-                url: '/teste',
-                views: {
-                    'content': {
-                        controller: 'TesteController',
-                        controllerAs:'vm',
-                        templateUrl: 'views/teste.html'
-                    }
-                }
-            })
-        
             .state('plataforma', {
                 url: '/plataforma',
                 views: {
@@ -57,13 +46,13 @@
                 }
             })
       
-            .state('wifi', {
-                url: '/wifi',
+            .state('wi-fi', {
+                url: '/wi-fi',
                 views: {
                     'content': {
                         controller: 'WifiController',
                         controllerAs:'vm',
-                        templateUrl: 'views/wifi.html'
+                        templateUrl: 'views/wi-fi.html'
                     }
                 }
             })

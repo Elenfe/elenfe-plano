@@ -12,9 +12,9 @@
 
     function WifiController($state, $http) {
         var vm = this;
-          $http.get('http://private-59658d-celulardireto2017.apiary-mock.com/planos/WF03').then(function (response){
-        vm.planos = response.data;
-        console.log(vm.planos);
+            $http.get('https://planoswifi03.firebaseio.com/WIFI03.json').then(function (response){
+        vm.pla = response.data;
+        console.log(vm.pla);
       })
     }
 })();
