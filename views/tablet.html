@@ -14,7 +14,7 @@
               <h5 class="panel-title">{{plano.sku}}</h5>
               <p class="m-b">{{"Franquia: " + plano.franquia}}</p>
               <p class="m-b">{{"Valor: " + plano.valor}}</p>
-              <a ui-sref="formulario" class="btn btn-primary" role="button">Escolher</a>              
+              <a ui-sref="formulario" class="btn btn-primary" ng-click='vm.salvarEscolha(plano.sku)' role="button">Escolher</a>              
             </div>
           </div>
         </div>

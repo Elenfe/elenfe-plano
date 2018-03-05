@@ -19,7 +19,7 @@
               <p class="m-b">{{"Valor do aparelho: " + plano.aparelho.valor}}</p>
               <p class="m-b" ng-hide="plano.aparelho.numeroParcelas <= 1">{{"Número de parcelas: " + plano.aparelho.numeroParcelas}}</p>
               <p class="m-b" ng-hide="plano.aparelho.valorParcela === false">{{"Valor da parcela: " + plano.aparelho.valorParcela}}</p>
-              <a ui-sref="formulario" class="btn btn-primary" role="button">Escolher</a>              
+              <a ui-sref="formulario" class="btn btn-primary" ng-click='vm.salvarEscolha(plano.sku)' role="button">Escolher</a>              
             </div>
           </div>
         </div>

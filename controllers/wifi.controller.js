@@ -16,5 +16,11 @@
         vm.pla = response.data;
         console.log(vm.pla);
       })
+      vm.salvarEscolha = function(id) {
+        localStorage.setItem("PlanoWifiEscolhido", id);
+        // console.log(localStorage.getItem("escolhido"));
+        localStorage.getItem("PlanoWifiEscolhido");
+    }
+    console.log(localStorage.getItem("PlanoWifiEscolhido"));
     }
 })();

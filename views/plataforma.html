@@ -12,7 +12,7 @@
               <h5 class="panel-title">{{plataforma.sku}}</h5>
               <p class="m-b">{{plataforma.nome | name}}</p>
               <p class="m-b">{{plataforma.descricao}}</p>
-              <a ui-sref="{{plataforma.nome | lowercase }}" class="btn btn-primary" role="button">Escolher</a>              
+              <a ui-sref="{{plataforma.nome | lowercase}}" ng-click='vm.salvarEscolha(plataforma.sku)' class="btn btn-primary" role="button">Escolher</a>              
             </div>
           </div>
   </div>
