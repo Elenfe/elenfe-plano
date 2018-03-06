@@ -12,37 +12,31 @@
 
     function FormularioController($state, $http) {
         var vm = this;
+        $(function(){
+            var tbClientes = localStorage.getItem("tbClientes");// Recupera os dados armazenados
+            tbClientes = JSON.parse(tbClientes); // Converte string para objeto
+            if(tbClientes == null) // Caso não haja conteúdo, iniciamos um vetor vazio
+            tbClientes = [];
+        });
+         
+        function Adicionar() {
+            var cliente = JSON.stringify({
+                nome : $("#nome").val(),
+                email : $("#email").val(),
+                nascimento : $("#data").val(),
+                cpf : $("#cpf").val(),
+                telefone : $("#tel").val()
+            });
 
-        vm.salvarformulario = function() {            
-                var nome = localStorage.getItem("nome");
-                var email = localStorage.getItem("email");
-                var nascimento = localStorage.getItem("nascimento");
-                var cpf = localStorage.getItem("cpf");
-                var telefone = localStorage.getItem("telefone");
-                
-                if(nome !== null){
-                   $("#nome").val(nome);
-                }
-                if(email !== null){
-                  $("#email").val(email);
-                }
-                if(nascimento !== null){
-                    $("#data").val(nascimento);
-                 }
-                 if(cpf !== null){
-                    $("#cpf").val(cpf);
-                 }
-                 if(telefone !== null){
-                    $("#tel").val(telefone);
-                 }
-                            
-                localStorage.setItem("nome",  $("#nome").val());
-                localStorage.setItem("email",  $("#email").val());
-                localStorage.setItem("nascimento",  $("#data").val());
-                localStorage.setItem("cpf",  $("#cpf").val());
-                localStorage.setItem("telefone",  $("#tel").val());
-                $("#enviado").html("Registro enviado!");
-              
-        }      
+            tbClientes.push(cliente);
+	        localStorage.setItem("tbClientes", JSON.stringify(tbClientes));
+	        alert("Registro adicionado.");
+	        return true;                               
+        }
+        
+        $("#frmCadastro").on("submit",function(){
+            console.log("clicado");
+            return Adicionar();   
+        });
     }
 })();
