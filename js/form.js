@@ -25,7 +25,3 @@ tbUsuarios = JSON.parse(tbUsuarios); // Converte string para objeto
 if (tbUsuarios == null) // Caso não haja conteúdo, iniciamos um vetor vazio
 tbUsuarios = [];
 });
-
-function voltar(){
-  localStorage.clear();
-}

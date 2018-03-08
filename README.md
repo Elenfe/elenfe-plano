@@ -1,6 +1,8 @@
 # plano
 projeto de uma SPA com AngularJs
 
+Site de compras de planos de internet.
+
 Tecnologias Empregadas
 HTML5
 CSS3
