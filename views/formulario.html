@@ -1,24 +1,22 @@
 <div class="jumbotron">
  <h1 class="text-center">Formulário de Cadastro</h1>
  <hr />
- <div class="alert alert-success" role="alert" ng-if="ctrl.success">
- Formulário enviado com sucesso!
- </div>
- <form id="frmCadastro">
+  
+<form name="formRegister" id="formRegister" class="positionFormRegister">
  
  <div class="form-group">
  <label class="control-label" for="nome">Nome</label>
- <input type="text" class="form-control" name="name" id="nome">
+ <input name="txtName" id="txtNome" type="text" class="form-control" placeholder="Crie seu nome de Usuário" autocomplete="off">
  </div>
  
  <div class="form-group">
  <label class="control-label" for="email">Email</label>
- <input type="text" class="form-control" name="email" id="email" >
+ <input name="txtEmail" id="txtEmail" type="text" class="form-control" placeholder="Seu endereço de e-mail" autocomplete="off">
  </div>
  
  <div class="form-group">
  <label class="control-label" for="data">Data de nascimento</label>
- <input type="date" class="form-control" name="data" id="data">
+ <input name="data" id="data" type="date" class="form-control" autocomplete="off">
  </div>
  
  <div class="form-group">
@@ -34,14 +32,17 @@ onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
  
  <hr />
  <div class="form-group text-center">
- <button type="submit" class="btn btn-primary" id="enviado">Enviar</button>
+ <button type="submit" class="btn btn-primary" onclick="Adicionar()">Enviar</button>
  </div>
  </form>
+
+
+  
  </div>
  <div class="row">
   <div class="col-md-12 m-b-lg">
             <div class="text-left">
-            <a class="btn btn-primary color-btn" role="button" href="javascript:history.back()">Voltar</a>             
+            <a class="btn btn-primary color-btn" role="button" href="javascript:history.back()" onclick="voltar()">Voltar</a>             
             </div>          
         </div>
         <br>
