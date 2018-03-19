@@ -2,7 +2,7 @@
  <h1 class="text-center">Formulário de Cadastro</h1>
  <hr />
   
-<form name="formRegister" id="formRegister" class="positionFormRegister">
+<form data-ng-submit="vm.registerUser(registerData)" name="formRegister" id="formRegister" class="positionFormRegister">
  
  <div class="form-group">
  <label class="control-label" for="nome">Nome</label>
@@ -32,7 +32,7 @@ onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
  
  <hr />
  <div class="form-group text-center">
- <button type="submit" class="btn btn-primary" onclick="Adicionar()">Enviar</button>
+ <button type="submit" class="btn btn-primary">Enviar</button>
  </div>
  </form>
 
