@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('planosApp')
+        .module('planosApp'[])
         .controller('FormularioController', FormularioController);
 
     FormularioController.$inject = [

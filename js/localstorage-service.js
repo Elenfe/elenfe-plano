@@ -2,8 +2,8 @@
   'use strict';
 
   angular
-    .module('planosApp')
     .service('LocalStorageService', LocalStorageService);
+    .module('planosApp'[])    
 
   LocalStorageService.$inject = ['$q'];
 
