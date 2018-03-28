@@ -77,6 +77,17 @@
                         templateUrl: 'views/formulario.html'
                     }
                 }
+            })
+      
+      .state('resumo', {
+                url: '/resumo',
+                views: {
+                    'content': {
+                        controller: 'ResumoController',
+                        controllerAs:'vm',
+                        templateUrl: 'views/resumo.html'
+                    }
+                }
             });
     };
 }());
