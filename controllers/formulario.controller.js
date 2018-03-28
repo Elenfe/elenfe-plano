@@ -1,24 +1,30 @@
 (function () {
     'use strict';
 
-    angular
-        .module('planosApp'[])
+    angular        
+        .module('planosApp')
         .controller('FormularioController', FormularioController);
 
     FormularioController.$inject = [
       '$state',
       '$http',
-      'LocalStorageService'
+      
+      
     ];
 
-    function FormularioController($state, $http, LocalStorageService) {
+    function FormularioController($state, $http) {
       var vm = this;
       vm.registerUser = registerUser;
-      vm.aluno= {};     
-    
+      vm.enviarFormulrio = enviarFormulrio;
+      vm.aluno= {};
+      
+      function enviarFormulrio(){
+        console.log(vm.aluno);
+        }
+      }
       
     function registerUser(registerData) {
-      LocalStorageService.store('aluno', vm.aluno);
+      // LocalStorageService.store('aluno', vm.aluno);
       }
-    }
+    
 })();
