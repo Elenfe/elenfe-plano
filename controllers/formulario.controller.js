@@ -17,14 +17,19 @@
       vm.registerUser = registerUser;
       vm.enviarFormulrio = enviarFormulrio;
       vm.aluno= {};
+      
+
       function enviarFormulrio(){
-        console.log(vm.aluno);
-        
+        // console.log(vm.aluno);
+        vm.dadosFormulario = vm.aluno;
+        var jsonDadosFormulario = JSON.stringify(vm.dadosFormulario); 
+        localStorage.setItem('dadosFormulario', jsonDadosFormulario);
+        $state.go("resumo");
         }
       }
       
     function registerUser(registerData) {
-      // localStorageService.store('aluno', vm.aluno);
+      // localStorage.setItem('dadosFormulario', vm.dadosFormulario);
       }
     
 })();

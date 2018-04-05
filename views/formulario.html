@@ -2,37 +2,37 @@
  <h1 class="text-center">Formulário de Cadastro</h1>
  <hr />
   
-<form data-ng-submit="vm.registerUser(registerData)" name="formRegister" id="formRegister" class="positionFormRegister">
+<form data-ng-submit="vm.registerUser(registerData)" novalidate name="formRegister" id="formRegister" class="positionFormRegister">
  
  <div class="form-group">
  <label class="control-label" for="nome">Nome</label>
- <input name="txtName" id="txtNome" ng-model="vm.aluno.nome" type="text" class="form-control" placeholder="Crie seu nome de Usuário" autocomplete="off">
+ <input name="txtName" id="txtNome" ng-model="vm.aluno.nome" required type="text" class="form-control" placeholder="Crie seu nome de Usuário" autocomplete="off">
  </div>
  
  <div class="form-group">
  <label class="control-label" for="email">Email</label>
- <input name="txtEmail" id="txtEmail" ng-model="vm.aluno.email" type="text" class="form-control" placeholder="Seu endereço de e-mail" autocomplete="off">
+ <input name="txtEmail" id="txtEmail" ng-model="vm.aluno.email" required type="text" class="form-control" placeholder="Seu endereço de e-mail" autocomplete="off">
  </div>
  
  <div class="form-group">
  <label class="control-label" for="data">Data de nascimento</label>
- <input name="data" id="data" type="date" ng-model="vm.aluno.dataNascimento" class="form-control" autocomplete="off">
+ <input name="data" id="data" type="date" ng-model="vm.aluno.dataNascimento" required class="form-control" autocomplete="off">
  </div>
  
  <div class="form-group">
  <label class="control-label" for="data">CPF</label>
- <input type="text" class="form-control" ng-model="vm.aluno.cpf" name="cpf" id="cpf" onBlur="ValidarCPF(form1.cpf);" 
+ <input type="text" class="form-control" ng-model="vm.aluno.cpf" required name="cpf" id="cpf" onBlur="ValidarCPF(form1.cpf);" 
 onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
  </div>
  
  <div class="form-group">
  <label class="control-label" for="course">Telefone</label>
- <input type="text" class="form-control" ng-model="vm.aluno.telefone" name="tel" id="tel">
+ <input type="text" class="form-control" ng-model="vm.aluno.telefone" required name="tel" id="tel">
  </div>
  
  <hr />
  <div class="form-group text-center">
- <button type="submit" ng-click="vm.enviarFormulrio()" class="btn btn-primary">Enviar</button>
+ <button type="submit" ng-disabled="formRegister.$invalid" ng-click="vm.enviarFormulrio()" class="btn btn-primary">Enviar</button>
  </div>
  </form>
   

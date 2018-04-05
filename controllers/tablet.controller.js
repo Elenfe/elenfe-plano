@@ -18,7 +18,6 @@
 
         vm.salvarEscolha = function(id) {
             localStorage.setItem("PlanoTabletEscolhido", id);
-            // console.log(localStorage.getItem("escolhido"));
             localStorage.getItem("PlanoTabletEscolhido");
         }
         console.log(localStorage.getItem("PlanoTabletEscolhido"));

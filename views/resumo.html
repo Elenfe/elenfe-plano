@@ -1,10 +1,30 @@
 <table>
- <tr class="txt-resumo-obrigado">Obrigado Sr(a) {{vm.nome}} segue abaixo o plano contratado. Em breve o Sr(a). receberá em seu email um link para confirmar sua compra.
+ <tr class="txt-resumo-obrigado">Obrigado Sr(a) {{vm.dadosFormulario.nome}}, segue abaixo o plano contratado. Em breve o Sr(a). receberá em seu email um link para confirmar sua compra.
  </tr>
   <tr>
     <th>Nome</th>
     <th>Email</th>
+    <th>Data de Nascimento</th>
+    <th>CPF</th>
+    <th>Telefone</th>
     <th>Tipo de plano</th>
     <th>Valor</th>
   </tr>
+  <tr>
+    <td>{{vm.dadosFormulario.nome | name}}</td>
+    <td>{{vm.dadosFormulario.email}}</td>
+    <td>{{vm.dadosFormulario.dataNascimento | date: 'dd/MM/yyyy'}}</td>
+    <td>{{vm.dadosFormulario.cpf }}</td>
+    <td>{{vm.dadosFormulario.telefone}}</td>
+    <td>{{vm.device}}</td>
+    <td>{{vm.valor}}</td>
+  </tr>
 </table>
+<div class="row">
+  <div class="col-md-12 m-b-lg">
+            <div class="text-left">
+            <a class="btn btn-primary color-btn" role="button" href="javascript:history.back()">Voltar</a>             
+            </div>          
+        </div>
+        <br>
+</div>
