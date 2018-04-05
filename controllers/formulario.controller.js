@@ -7,31 +7,24 @@
 
     FormularioController.$inject = [
       '$state',
-      '$http',
-      'localStorageService'
+      '$http'
       
       
     ];
 
-    function FormularioController($state, $http, localStorageService) {
+    function FormularioController($state, $http) {
       var vm = this;
       vm.registerUser = registerUser;
       vm.enviarFormulrio = enviarFormulrio;
       vm.aluno= {};
-      
       function enviarFormulrio(){
         console.log(vm.aluno);
-        localStorage.setItem(vm.aluno);
-        localStorage.getItem(vm.aluno);
-
-        // localStorage.setItem("PlanoComputEscolhido", id);
-            // console.log(localStorage.getItem("escolhido"));
-            // localStorage.getItem("PlanoComputEscolhido");
+        
         }
       }
       
     function registerUser(registerData) {
-      // LocalStorageService.store('aluno', vm.aluno);
+      // localStorageService.store('aluno', vm.aluno);
       }
     
 })();
