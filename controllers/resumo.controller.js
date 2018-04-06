@@ -57,6 +57,15 @@
         }
 
         localStorage.clear();
+
+        function getValor(){
+            localStorage.setItem("escolhido", id);
+            $http.get('https://plataformas-dc8cb.firebaseio.com/plataformas.json').then(function (response){
+                vm.plataformas = response.data;
+                var EsData = vm.plataformas;    
+            })
+        }
+        
       
 
         // // $http.get('https://plataformas-dc8cb.firebaseio.com/plataformas.json').then(function (response){
